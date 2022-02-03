@@ -7,4 +7,4 @@ All the following are scripts:
 
 | Filename | Description |
 | -------- | ----------- |
-| `idea.sh` | create 5 empty files after prompting user to name them; error(s): 5th loop doesn't create empty file. |
+| `idea.sh` | create (5) empty files after prompting user to name each one; **error(s): 5th loop doesn't create empty file.** |
