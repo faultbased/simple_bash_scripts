@@ -1,5 +1,4 @@
 #!/bin/bash
-#ask user
 for i in {1..5}
 do 
 	echo "Please enter file name." 
