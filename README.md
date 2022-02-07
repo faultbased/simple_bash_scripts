@@ -8,3 +8,4 @@ All the following are scripts:
 | Filename | Description |
 | -------- | ----------- |
 | `idea.sh` | create (5) empty files after prompting user to name each one; **error(s): 5th loop doesn't create empty file.** |
+| `it_exist.sh` | checks if a specific file exist already |
