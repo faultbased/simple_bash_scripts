@@ -2,8 +2,10 @@
 echo "What is the file name"
 
 read varName
-if [ -f "$varName" ]; then
+if [ -f "$varName" ]
+then
 echo "file exists!"
 else
-echo "file does not exist"
+mkdir "$varName"
+echo "file does not exist but it does now!"
 fi
