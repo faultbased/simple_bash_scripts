@@ -6,6 +6,6 @@ if [ -f "$varName" ]
 then
 echo "file exists!"
 else
-mkdir "$varName"
+touch $varName
 echo "file does not exist but it does now!"
 fi
