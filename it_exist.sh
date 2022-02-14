@@ -2,7 +2,7 @@
 echo "What is the file name"
 #reads user input
 read varName
-if [ -f "$varName" ]
+if [ -f "$varName"* ]
 then
 echo "file exists!"
 else
