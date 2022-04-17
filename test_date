@@ -1,0 +1,4 @@
+#!/bin/bash
+
+now=`date +"%D"`
+echo "${now}" 

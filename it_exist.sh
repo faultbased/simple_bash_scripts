@@ -1,11 +1,16 @@
 #!/bin/bash
-echo "What is the file name"
+
+
+
+printf "What is the file name?\n"
 #reads user input
 read varName
-if [ -f "$varName"* ]
+if [ -f "$varName" ]
 then
 echo "file exists!"
 else
-touch $varName
-echo "file does not exist but it does now!"
+
+touch "$varName"
+ 
+printf "$varName has been created, Enjoy! \n "
 fi
