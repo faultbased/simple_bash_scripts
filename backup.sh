@@ -1,25 +1,11 @@
 #!/bin/bash
 
-backup_dirs=("/etc")
-dest_dir="/home/xoxo/Desktop/backup"
-dest_server="xoxo-LT21" 
-backup_date=$(date +%b-%d-%y)
+#backing up req. files:
 
-echo "Starting backup of: ${backup_dirs[@]}"
+echo "create backup dir" && mkdir ~/backup 2> /dev/null || echo "dir already exist!"
 
-for i in "${backup_dirs[@]}"; do
-sudo tar -Pczf /tmp/$i-$backup_date.tar.gz $i
-if [ $? -eq 0 ]; then
-echo "$i backup succeeded."
-else
-echo "$i backup failed."
-fi
-scp /tmp/$i-$backup_date.tar.gz $dest_server:$dest_dir
-if [ $? -eq 0 ]; then
-echo "$i transfer succeeded."
-else
-echo "$i transfer failed."
-fi
-done
+echo "copy files" && cp -v /usr/bin/* ~/backup > log_file 2>&1
 
-echo "Backup is done." 
+grep -i denied log_file | tail -n 1
+
+exit 127
