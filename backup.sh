@@ -7,13 +7,14 @@ BACKUP_TARGET="/home/$USER/backup-variables"
 LOGFILE="/home/vagrant/log_file"
 
 #calling an undeclared function
-init () {
+#init () {
 	echo "create backup dir" && mkdir $BACKUP_TARGET 2> /dev/null || echo "dir already exist!"
 	#basically purges the log_file since it's never deleted
-	echo "" > $LOGFILE
+		#Also uses command substitutions to append current date/time to log_file
+	echo "$(date +"%x %y %z")" >> $LOGFILE
 	#declares script local variable using 'local' parameter that is accessible to variable only 
-	local CLOUDSTUFF=36
-}
+#	local CLOUDSTUFF=36
+#}
 
 #reassigning tail command to read input for specified number to count
 tail () {
