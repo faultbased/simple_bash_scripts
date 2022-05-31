@@ -2,5 +2,12 @@
 for i in {1..5}
 do 
 	echo "Please enter file name." 
-	read varfile >> $varfile.txt
-done 
+	read varFile >> $varFile.txt
+done
+
+clearup () {
+        rm -rf $varFile
+        echo "Nevermind then..."
+}
+
+trap clearup SIGINT
